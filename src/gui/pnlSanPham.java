@@ -92,16 +92,25 @@ public class pnlSanPham extends JPanel implements ActionListener, MouseListener,
 	/**
 	 * Create the frame.
 	 */
+	public class Colors {
+ 	    public static final Color COLOR_LIGHTBLACK = new Color(34, 34, 34);        // Gần như đen
+ 	    public static final Color COLOR_MEDIUM_GRAY = new Color(91, 90, 90); // Xám đậm
+ 	    public static final Color COLOR_LIGHT_GRAY = new Color(200, 200, 200); // Xám nhạt
+ 	    public static final Color COLOR_RED = new Color(186, 90, 90);        // Đỏ nhạt
+ 	    public static final Color COLOR_GREEN = new Color(77, 188, 137);     // Xanh lục
+ 	    public static final Color COLOR_LIGHT_CYAN = new Color(70, 130, 180); //XANH DUONG NHAT
+ 	    // Có thể thêm nhiều màu khác nếu cầnnew Color(70, 130, 180)
+ 	}
 	public pnlSanPham(JFrame frmTrangChu) {
 		this.frmTrangChu = frmTrangChu;
-		setBackground(new Color(186, 90, 90));
+		setBackground(Colors.COLOR_LIGHTBLACK);
 		setBounds(10, 58, 1491, 697);
 		setLayout(null);
 		
 		pnlThongTin = new JPanel();
 		pnlThongTin.setBorder(new TitledBorder(null, "Th\u00F4ng tin s\u1EA3n ph\u1EA9m", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		pnlThongTin.setForeground(Color.WHITE);
-		pnlThongTin.setBackground(new Color(186, 90, 90));
+		pnlThongTin.setBackground(Colors.COLOR_LIGHT_GRAY);
 		pnlThongTin.setBounds(10, 10, 638, 677);
 		add(pnlThongTin);
 		pnlThongTin.setLayout(null);
@@ -827,7 +836,7 @@ public class pnlSanPham extends JPanel implements ActionListener, MouseListener,
 				@Override
 				protected void paintBorder(Graphics g) {
 					Graphics2D g2 = (Graphics2D) g.create();
-					g2.setColor(Color.GRAY);
+					g2.setColor(Colors.COLOR_MEDIUM_GRAY);
 					g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, arc, arc);
 					g2.dispose();
 				}
@@ -843,7 +852,7 @@ public class pnlSanPham extends JPanel implements ActionListener, MouseListener,
 					setFocusPainted(false);
 					setBorderPainted(false);
 					setForeground(Color.WHITE);
-					setBackground(new Color(70, 130, 180)); // xanh dương nhạt
+					setBackground(Colors.COLOR_MEDIUM_GRAY); // xanh dương nhạt
 					setFont(new Font("Segoe UI", Font.PLAIN, 16));
 				}
 
