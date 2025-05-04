@@ -78,15 +78,24 @@ public class pnlThongKe extends JPanel implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
+	public class Colors {
+ 	    public static final Color COLOR_LIGHTBLACK = new Color(34, 34, 34);        // Gần như đen
+ 	    public static final Color COLOR_MEDIUM_GRAY = new Color(91, 90, 90); // Xám đậm
+ 	    public static final Color COLOR_LIGHT_GRAY = new Color(200, 200, 200); // Xám nhạt
+ 	    public static final Color COLOR_RED = new Color(186, 90, 90);        // Đỏ nhạt
+ 	    public static final Color COLOR_GREEN = new Color(77, 188, 137);     // Xanh lục
+ 	    public static final Color COLOR_LIGHT_CYAN = new Color(70, 130, 180); //XANH DUONG NHAT
+ 	    // Có thể thêm nhiều màu khác nếu cầnnew Color(70, 130, 180)
+ 	}
 	public pnlThongKe(JFrame frmTrangChu) {
 		this.frmTrangChu = frmTrangChu;
-		setBackground(new Color(186, 90, 90));
+		setBackground(Colors.COLOR_LIGHTBLACK);
 		setBounds(10, 58, 1491, 697);
 		setLayout(null);
 		
 		JPanel pnlKhung1 = new JPanel();
 		pnlKhung1.setForeground(Color.WHITE);
-		pnlKhung1.setBackground(new Color(186, 90, 90));
+		pnlKhung1.setBackground(Colors.COLOR_MEDIUM_GRAY);
 		pnlKhung1.setBounds(10, 64, 1471, 258);
 		add(pnlKhung1);
 		pnlKhung1.setLayout(null);
@@ -517,7 +526,7 @@ public class pnlThongKe extends JPanel implements ActionListener{
 					@Override
 					protected void paintBorder(Graphics g) {
 						Graphics2D g2 = (Graphics2D) g.create();
-						g2.setColor(Color.GRAY);
+						g2.setColor(Colors.COLOR_LIGHT_GRAY);
 						g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, arc, arc);
 						g2.dispose();
 					}
@@ -533,7 +542,7 @@ public class pnlThongKe extends JPanel implements ActionListener{
 						setFocusPainted(false);
 						setBorderPainted(false);
 						setForeground(Color.WHITE);
-						setBackground(new Color(70, 130, 180)); // xanh dương nhạt
+						setBackground(Colors.COLOR_LIGHT_CYAN); // xanh dương nhạt
 						setFont(new Font("Segoe UI", Font.PLAIN, 16));
 					}
 
